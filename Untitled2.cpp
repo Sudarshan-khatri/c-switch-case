@@ -1,36 +1,22 @@
 #include<stdio.h>
-int prime_not(int);
 int main()
 {
-	int n,result;
-	printf("enter the number");
+	int n,count,i;
+	printf("enter the number\n");
 	scanf("%d",&n);
-	result=prime_not(n);
-	if(result == 0)
+	for(i=100;i<200;i++)
 	{
-		printf("number is prime\n");
+		if(n%i==0)
+		{
+			count++;
+		}
 	}
-	else
-	{
-		printf("number is not prime");
-	}
-}
-int prime_not(int x)
-{
-	int i,count=0;
-	for(i=2;i<x;i++)
-	{
-		if(x%i==0)
-	{
-	 count++;
-	}
-	if(count==0)
-	{
-		return 0;
-	}
-	else 
-	{
-		return 1;
-	}
-}
+		if(count==2)
+		{
+			printf("number is prime \n");
+		}
+		else
+		{
+			printf("number is not prime\n");
+		}
 }
