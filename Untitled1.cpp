@@ -33,3 +33,37 @@ int main()
 			printf("we are really sorry");
 		}
 }
+/* program to find number is prime or not */
+#include<stdio.h>
+int prime_not(int);
+//int main()
+{
+	int n,result;
+	printf("enter the number");
+	scanf("%d",&n);
+	result=prime_not(n);
+	if(result==1)
+	{
+		printf("number is prime\n");
+	}
+	else
+	{
+		printf("number is not prime");
+	}
+}
+int prime_not(int x)
+{
+	int i,count;
+	for(i=0;i<x/2;i++)
+	{
+	 count++;
+	}
+	if(count==2)
+	{
+		return 1;
+	}
+	else 
+	{
+		return 0;
+	}
+}
